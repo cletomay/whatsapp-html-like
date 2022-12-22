@@ -10,52 +10,29 @@
   <link rel="stylesheet" href="modules/fontawesome-free-6.2.1-web/css/all.min.css">
 
   <style>
-    .bgw1 {
-      background-color: #202c33;
-    }
+    body { color: white; }
 
-    .bgw-user {
-      background-color: #111b21;
-    }
+    input[type="text"] { background-color: #2a3942; }
+    
+    a { color: white; text-decoration: none; }
+    a:hover { color: white; text-decoration: underline; }
+    
+    img { height: 40px; width: 40px; }
 
-    .bgw-user:hover {
-      background-color: #202c33;
-    }
+    .bg1 { background-color: #202c33; }
+    .bg2 { background-color: #111b21; }
+    .bg3 { background-color: #2a3942; }
 
-    .hover:hover {
-      cursor: pointer;
-    }
+    .bg-user { background-color: #111b21;}
+    .bg-user:hover { background-color: #202c33; }
 
-    .bg-me {
-      background-color: #005c4b;
-    }
+    .hover:hover { cursor: pointer; }
 
-    .bgw2 {
-      background-color: #111b21;
-    }
+    .bg-me { background-color: #005c4b; }
 
-    .bgw3 {
-      background-color: #2a3942;
-      background: #2a3942;
-    }
+    .user-resume { min-width: 100px; }
 
-    input[type="text"] {
-      background-color: #2a3942;
-    }
-
-    body {
-      color: white;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: white;
-      text-decoration: underline;
-    }
+    .user-message { max-width: 450px;}
   </style>
 </head>
 
@@ -63,12 +40,10 @@
 
   <div class="h-100">
     <div class="d-flex h-100">
-      <div class="bgw2">        
-        <div class="d-flex bgw1 justify-content-between">
+      <div class="bg2">
+        <div class="d-flex bg1 justify-content-between">
           <div class="p-3">
-            <img
-              src="assets/user1.png"
-              style="height: 40px; width: 40px;">
+            <img src="assets/user1.png">
           </div>
           <div class="p-3 d-flex align-items-center">
             <button type="button" class="btn btn-link text-light">
@@ -79,15 +54,25 @@
             </button>
           </div>
         </div>
-        <div class="d-flex bgw-user hover">
+        <div class="d-flex bg-user hover">
           <div class="d-flex align-items-center p-3">
-            <img
-              src="assets/mat-fraser.jpg"
-              style="height: 40px; width: 40px;">
+            <img src="assets/mat-fraser.jpg">
           </div>
           <div class="d-flex flex-fill flex-column p-3">
-            <div style="min-width: 100px;"><b>Mat Fraser</b></div>
+            <div class="user-resume"><b>Mat Fraser</b></div>
             <div>Me: See ya!</div>
+          </div>
+          <div class="p-3 text-secondary">
+            Yesterday
+          </div>
+        </div>
+        <div class="d-flex bg-user hover">
+          <div class="d-flex align-items-center p-3">
+            <img src="assets/tia.jpg">
+          </div>
+          <div class="d-flex flex-fill flex-column p-3">
+            <div class="user-resume"><b>Tia Clair</b></div>
+            <div>Me: Everything is fine!</div>
           </div>
           <div class="p-3 text-secondary">
             Yesterday
@@ -95,11 +80,9 @@
         </div>
       </div>
       <div class="bg-primary d-flex flex-column flex-fill">
-        <div class="d-flex bgw1">
+        <div class="d-flex bg1">
           <div class="p-3">
-            <img
-              src="assets/mat-fraser.jpg"
-              style="height: 40px; width: 40px;">
+            <img src="assets/mat-fraser.jpg">
           </div>
           <div class="d-flex flex-fill p-3">
             <a href="#">
@@ -115,25 +98,20 @@
             </button>
           </div>
         </div>
-        <div class="d-flex flex-fill bgw2 justify-content-end flex-column py-2">
+        <div class="d-flex flex-fill bg2 justify-content-end flex-column py-2">
           <div class="d-flex">
             <div class="d-flex px-3">
               <div class="d-flex px-3 my-1 flex-fill">
-                <img
-                  src="assets/mat-fraser.jpg"
-                  style="height: 40px; width: 40px;">
+                <img src="assets/mat-fraser.jpg">
               </div>
               <div>
-                <div class="d-flex flex-column mx-3 my-1 px-2 bgw3 rounded-2">
+                <div class="d-flex flex-column mx-3 my-1 px-2 bg3 rounded-2">
                   <div class="px-1 pt-1">
                     <a href="#">
                       <b>Mat Fraser</b>
                     </a>
                   </div>
-                  <div class="p-1">Hey man, hope you get a good time!</div>
-                </div>
-                <div class="d-flex flex-column mx-3 my-1 px-2 bgw3 rounded-2">
-                  <div class="p-1">See ya!</div>
+                  <div class="p-1 user-message">Hey Harry, how have you been? Long time no see!</div>
                 </div>
               </div>
             </div>
@@ -142,16 +120,106 @@
             <div class="d-flex px-3">
               <div>
                 <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
-                  <div class="p-1">Sure I will!</div>
+                  <div class="p-1 user-message">Hey! What a surprise! Yes, you are right, we haven’t seen each other in a long time.</div>
                 </div>
                 <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
-                  <div class="p-1">See ya!</div>
+                  <div class="p-1 user-message">How have you been?</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex px-3">
+              <div class="d-flex px-3 my-1 flex-fill">
+                <img src="assets/mat-fraser.jpg">
+              </div>
+              <div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 bg3 rounded-2">
+                  <div class="px-1 pt-1">
+                    <a href="#">
+                      <b>Mat Fraser</b>
+                    </a>
+                  </div>
+                  <div class="p-1 user-message">There is an important campaign next week which is keeping me busy otherwise rest is going good in my life.</div>
+                </div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 bg3 rounded-2">
+                  <div class="p-1 user-message">How about you?</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="d-flex px-3">
+              <div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
+                  <div class="p-1 user-message">Oh! I just finished a meeting with a very important client of mine and now I finally have some free time.</div>
+                </div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
+                  <div class="p-1 user-message">I feel relieved that I’m done with it.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex px-3">
+              <div class="d-flex px-3 my-1 flex-fill">
+                <img src="assets/mat-fraser.jpg">
+              </div>
+              <div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 bg3 rounded-2">
+                  <div class="px-1 pt-1">
+                    <a href="#">
+                      <b>Mat Fraser</b>
+                    </a>
+                  </div>
+                  <div class="p-1 user-message">Good for you then. Hey! Let’s make a plan and catch up with each other after next week.</div>
+                </div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 bg3 rounded-2">
+                  <div class="p-1 user-message">What do you say?</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="d-flex px-3">
+              <div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
+                  <div class="p-1 user-message">Sure, why not?</div>
+                </div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
+                  <div class="p-1 user-message">Give me a call when you are done with your project.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex px-3">
+              <div class="d-flex px-3 my-1 flex-fill">
+                <img src="assets/mat-fraser.jpg">
+              </div>
+              <div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 bg3 rounded-2">
+                  <div class="px-1 pt-1">
+                    <a href="#">
+                      <b>Mat Fraser</b>
+                    </a>
+                  </div>
+                  <div class="p-1 user-message">Sure, then. Bye, take care.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="d-flex px-3">
+              <div>
+                <div class="d-flex flex-column mx-3 my-1 px-2 rounded-2 bg-me">
+                  <div class="p-1 user-message">Bye buddy.</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="d-flex bgw1">
+        <div class="d-flex bg1">
           <div class="p-3 d-flex align-items-center">
             <button type="button" class="btn btn-link text-light">
               <i class="fa-regular fa-face-smile"></i>
